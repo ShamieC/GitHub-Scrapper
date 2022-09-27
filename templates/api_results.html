@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+	<style> a {font-size: 20px}</style>
+</head>
+<body>
+	{% for repo in repos.items %}
+	<p> Repository Name: {{repo.repo_name }}   <br>
+		Description: {{ repo.description }}    <br>
+		Number of stars: {{ repo.num_stars }}  <br>
+		Language: {{repo.language}}            <br>
+		License: {{ repo.license }}            <br>
+		Last Updated: {{ repo.last_updated }}  <br>
+		Has Issues: {{ repo.has_issues }} <br> </p>
+	<hr>
+	{% endfor %}
+
+	<b>Page Numbers:<b> 
+	{% for page in repos.iter_pages(left_edge=3, right_edge=3, left_current=3, right_current=3) %}
+		{% if page %}
+        	<a href="{{ url_for('paginated_api_results', page_num=page) }}">{{ page }}</a>
+		{% else %}
+          ...
+ 		{% endif %}
+	{% endfor %}
+</body>
+</html>
+

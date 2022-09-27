@@ -1,0 +1,62 @@
+body {
+ background-image: url("bimage.jpg");
+ background-repeat: no-repeat, repeat;
+ background-size: cover;
+ /*background-color: #cccccc;*/
+}
+
+#logo {
+	padding:100px 100px 0px 100px;
+    text-align: center;
+    font-size:40px
+}
+
+#search {
+	padding: 20px 100px 80px 100px;
+}
+
+input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	font-size: 25px;
+	border-radius: 20px
+	
+}
+
+#pages_field {
+	width: 500px;
+	margin-bottom: 20px;
+}
+
+button {
+
+	border-radius: 14px; 
+	width: 250px;
+	padding: 20px 60px;
+	transition-duration: 0.4s;
+	font-size: 20px;
+	font-weight: 600; 
+
+}
+
+button:hover {
+	color: white;
+ 	background-color: #3295A8; 
+ 
+}
+
+.selectbuttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#api_button {
+	margin-right: 30px;
+}
+
+#scrape_button {
+	margin-left: 40px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Via Scraper</title>
+</head>
+<body>
+	{% for repo in repos %}
+	<p> Repository Name: {{repo.repo_name }}   <br>
+		Description: {{ repo.description }}    <br>
+		{% if repo.tags == None %}
+			Tags: None                        
+		{% else %}
+			Tags:{% for tag in repo.tags %} {{tag}},
+			{% endfor %}                          
+		 {% endif %}                           <br>
+		Number of stars: {{ repo.num_stars }}  <br>
+		Language: {{repo.language}}            <br>
+		License: {{ repo.license }}            <br>
+		Last Updated: {{ repo.last_updated }}  <br>
+		Number of issues: {{ repo.num_issues }} <br> </p>
+	<hr>
+	{% endfor %} 
+</body>
+</html>
+

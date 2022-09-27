@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<title>Search</title>
+	</head>
+	
+	<body>
+		<div id="logo">
+			<h1> Search for GitHub Repositories</h1>
+		</div>
+
+
+		<div id="search">
+			<form id="searchform" action="http://127.0.0.1:5000/api_results" method="post">
+				<input id="input" type="search" name="query" placeholder="Search for a repository">
+			</form>
+		</div>
+
+		<div id="num_pages">
+			<input type="number" id="pages_field" name="number_of_pages" form="searchform" type="submit" placeholder="Enter number of pages for API search" formaction="http://127.0.0.1:5000/api_results" method="post">
+		</div>
+		
+
+		<div class="selectbuttons">
+			<button id="api_button" form="searchform" type="submit" 
+			formaction="http://127.0.0.1:5000/api_results" method="post">Via API</button>
+
+			<button id="scrape_button" form="searchform" type="submit" 
+			formaction="http://127.0.0.1:5000/scraper_results" method="post">Via Scraper</button>
+		</div>
+
+	</body>
+</html
+
